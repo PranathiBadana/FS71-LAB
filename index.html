@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Weekly Assessments</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 700px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .week-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .week-card {
+            background: #f8f9ff;
+            border-radius: 12px;
+            padding: 20px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .week-card:hover {
+            transform: translateX(10px);
+            background: #eef0ff;
+            border-color: #667eea;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        .week-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .week-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .week-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        .week-meta .badge {
+            background: #667eea;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .week-icon {
+            font-size: 28px;
+        }
+
+        .week-card:nth-child(1) { border-left: 4px solid #FF6B6B; }
+        .week-card:nth-child(2) { border-left: 4px solid #4ECDC4; }
+        .week-card:nth-child(3) { border-left: 4px solid #FFA07A; }
+
+        .week-card:nth-child(1) .week-icon { color: #FF6B6B; }
+        .week-card:nth-child(2) .week-icon { color: #4ECDC4; }
+        .week-card:nth-child(3) .week-icon { color: #FFA07A; }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .week-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .week-meta {
+                flex-wrap: wrap;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Full Stack Weekly Assessments</h1>
+        <p class="subtitle">Click on any week to view your assessment</p>
+
+        <div class="week-grid">
+            <!-- Week 1 -->
+            <a href="TASKS/task1.html" class="week-card">
+                <div class="week-info">
+                    <div class="week-title">📝 Week 1 Assessment</div>
+                    <div class="week-meta">
+                        <span class="badge">HTML & CSS</span>
+                        <span>📅 02-08-2026</span>
+                    </div>
+                </div>
+                <div class="week-icon">📄</div>
+            </a>
+
+            <!-- Week 2 -->
+            <a href="TASKS/task2.html" class="week-card">
+                <div class="week-info">
+                    <div class="week-title">⚡ Week 2 Assessment</div>
+                    <div class="week-meta">
+                        <span class="badge">JavaScript</span>
+                        <span>📅 01-08-2026</span>
+                    </div>
+                </div>
+                <div class="week-icon">📄</div>
+            </a>
+
+            <!-- Week 3 -->
+            <a href="TASKS/task3.html" class="week-card">
+                <div class="week-info">
+                    <div class="week-title">🚀 Week 3 Assessment</div>
+                    <div class="week-meta">
+                        <span class="badge">DOM & APIs</span>
+                        <span>📅 01-08-2026</span>
+                    </div>
+                </div>
+                <div class="week-icon">📄</div>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>📌 Total: 3 Weekly Assessments Completed</p>
+            <p style="margin-top: 5px;">
+                <a href="https://github.com/PranathiBadana/FS71-LAB" target="_blank">View on GitHub</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
