@@ -1,0 +1,26 @@
+<html>
+<head>
+<link rel="stylesheet" href="table.css">
+</head>
+<body>
+
+<caption> 3/4 CSM -A student data </caption>
+<table width=80%>
+   <tr>  <th> ROLLNO  </th> <th> NAME OF THE STUDENT </th> </tr>
+<tr> <td> 101 </td> <td> xyz </td> </tr>
+ <tr> <td> 102 </td> <td> abc </td> </tr>     
+<tr> <td> 103 </td> <td> pqr </td> </tr>
+<tr> <td> 104 </td> <td> mno </td> </tr>
+
+
+</table>
+
+
+</body>
+
+
+
+
+
+
+</html>
