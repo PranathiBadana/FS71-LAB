@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            padding-top: 50px;
+        }
+
+        .todo-container {
+            background: white;
+            width: 400px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .input-section {
+            display: flex;
+            gap: 10px;
+        }
+
+        #taskInput {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #addBtn {
+            padding: 10px 15px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #eee;
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        li.completed span {
+            text-decoration: line-through;
+            color: gray;
+        }
+
+        .deleteBtn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="todo-container">
+        <h1>My To-Do List</h1>
+
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="Enter a task">
+            <button id="addBtn">Add</button>
+        </div>
+
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+        // Selecting HTML elements using DOM
+        const taskInput = document.getElementById("taskInput");
+        const addBtn = document.getElementById("addBtn");
+        const taskList = document.getElementById("taskList");
+
+        // Event Listener for Add button
+        addBtn.addEventListener("click", function () {
+
+            const taskText = taskInput.value.trim();
+
+            // Check if input is empty
+            if (taskText === "") {
+                alert("Please enter a task!");
+                return;
+            }
+
+            // Create a new list item
+            const li = document.createElement("li");
+
+            // Create task text
+            const span = document.createElement("span");
+            span.textContent = taskText;
+
+            // Create Delete button
+            const deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "Delete";
+            deleteBtn.classList.add("deleteBtn");
+
+            // Add task and button to list item
+            li.appendChild(span);
+            li.appendChild(deleteBtn);
+
+            // Add list item to task list
+            taskList.appendChild(li);
+
+            // Clear input
+            taskInput.value = "";
+        });
+
+        // Event listener for task list
+        taskList.addEventListener("click", function (event) {
+
+            // Mark task as completed
+            if (event.target.tagName === "SPAN") {
+                event.target.parentElement.classList.toggle("completed");
+            }
+
+            // Delete task
+            if (event.target.classList.contains("deleteBtn")) {
+                event.target.parentElement.remove();
+            }
+        });
+
+        // Add task when Enter key is pressed
+        taskInput.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                addBtn.click();
+            }
+        });
+    </script>
+
+</body>
+</html>
