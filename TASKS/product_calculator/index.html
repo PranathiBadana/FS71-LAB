@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Calculator</title>
+
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Interactive Product Calculator</h1>
+
+        <!-- Product name -->
+        <label>Product Name</label>
+        <input type="text" id="productName" placeholder="Enter product name">
+
+        <!-- Quantity -->
+        <label>Quantity</label>
+        <input type="number" id="quantity" value="1" min="1">
+
+        <!-- Price -->
+        <label>Price</label>
+        <input type="number" id="price" placeholder="Enter price" min="0">
+
+        <!-- Result -->
+        <div id="result">
+            Total Price: ₹0.00
+        </div>
+
+    </div>
+
+    <!-- Connect JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
