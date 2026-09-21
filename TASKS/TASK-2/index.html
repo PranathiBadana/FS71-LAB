@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <b><h1>PART A</h1></b>
+    <!-- Title of the webpage -->
+    <title>My Styled Webpage</title>
+
+    <style>
+        /* Center the heading */
+        h1 {
+            text-align: center;
+        }
+
+        /* Center the canvas */
+        canvas {
+            display: block;
+            margin: 20px auto;
+            border: 2px solid black;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Main Heading -->
+    <h1>HTML5 Canvas</h1>
+
+    <!-- Canvas Element -->
+    <canvas id="myCanvas" width="500" height="300">
+        Your browser does not support the canvas element.
+    </canvas>
+
+    <!-- JavaScript for Drawing -->
+    <script>
+
+        // Access the canvas
+        var canvas = document.getElementById("myCanvas");
+
+        // Get 2D drawing context
+        var ctx = canvas.getContext("2d");
+
+        // Draw a Rectangle
+        ctx.fillStyle = "violet";
+        ctx.fillRect(20, 20, 150, 80);
+
+        // Draw a Circle
+        ctx.beginPath();
+        ctx.arc(280, 60, 40, 0, 2 * Math.PI);
+        ctx.fillStyle = "green";
+        ctx.fill();
+
+        // Draw a Line
+        ctx.beginPath();
+        ctx.moveTo(50, 180);
+        ctx.lineTo(350, 180);
+        ctx.strokeStyle = "red";
+        ctx.lineWidth = 3;
+        ctx.stroke();
+
+        // Display Name as Text
+        ctx.font = "24px Arial";
+        ctx.fillStyle = "blue";
+        ctx.fillText("Badana Pranathi", 120, 250);
+
+    </script>
+    <hr>
+    <br>
+<b><h1>PART B</h1></b>
+    <!-- Title -->
+    <title>My Styled Webpage</title>
+
+    <!-- Internal CSS -->
+    <style>
+
+        /* Body */
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:linear-gradient(to right,#74ebd5,#ACB6E5);
+        }
+
+        /* Header */
+        header{
+            background-color:#003366;
+            color:white;
+            text-align:center;
+            padding:20px;
+            font-size:35px;
+            text-shadow:2px 2px 5px black;
+        }
+
+        /* Navigation Bar */
+        nav{
+            background-color:#222;
+            text-align:center;
+            padding:15px;
+        }
+
+        /* Navigation Links */
+        nav a{
+            color:white;
+            text-decoration:none;
+            margin:20px;
+            font-size:20px;
+        }
+
+        /* Hover Effect for Navigation Links */
+        nav a:hover{
+            color:yellow;
+        }
+
+        /* Content Cards */
+        .container{
+            display:flex;
+            justify-content:center;
+            gap:30px;
+            margin:40px;
+        }
+
+        .card{
+            background:white;
+            width:250px;
+            border:2px solid black;
+            border-radius:15px;
+            padding:20px;
+            box-shadow:5px 5px 10px gray;
+            text-align:center;
+        }
+
+        .card h2{
+            font-family:Georgia;
+            font-size:24px;
+        }
+
+        .card p{
+            font-size:18px;
+        }
+
+        /* Button */
+        button{
+            background-color:#007BFF;
+            color:white;
+            border:none;
+            border-radius:8px;
+            padding:10px 20px;
+            font-size:16px;
+        }
+
+        /* Hover Effect for Button */
+        button:hover{
+            background-color:green;
+            cursor:pointer;
+        }
+
+        /* Footer */
+        footer{
+            background-color:#003366;
+            color:white;
+            text-align:center;
+            padding:15px;
+            margin-top:30px;
+            text-shadow:1px 1px 3px black;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        My Styled Webpage
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Three Content Cards -->
+    <div class="container">
+
+        <!-- Card 1 -->
+        <div class="card">
+            <h2>Card 1</h2>
+            <p>This is the first content card.</p>
+            <button>Read More</button>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <h2>Card 2</h2>
+            <p>This is the second content card.</p>
+            <button>Read More</button>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <h2>Card 3</h2>
+            <p>This is the third content card.</p>
+            <button>Read More</button>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2026 My Styled Webpage
+    </footer>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
