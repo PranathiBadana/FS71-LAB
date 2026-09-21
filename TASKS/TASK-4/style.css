@@ -1,0 +1,84 @@
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main container */
+.container {
+    width: 500px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+}
+
+/* Text box */
+input {
+    width: 65%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Add Task button */
+#addBtn {
+    padding: 10px 15px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Each task */
+li {
+    list-style: none;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Task text takes available space */
+.taskText {
+    flex: 1;
+}
+
+/* Complete button */
+.completeBtn {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Delete button */
+.deleteBtn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Style applied when task is completed */
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
